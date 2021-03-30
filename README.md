@@ -1,1 +1,1 @@
-# dictionary
+### Python dictionary of English words
