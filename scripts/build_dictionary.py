@@ -9,21 +9,23 @@ import time
 # Import project modules
 from scrape_merriam_webster import merriam_webster_def
 
-# Retrieve massive Unix system word list.
+# Retrieve massive Unix system word list
 with open('../words.txt', 'r') as f:
    words_list = f.read().split()
 
-word_dict = {}
+words_dict = {}
 for word in words_list:
-    # Throttle to avoid overloading merriam-webster.com 
-    time.sleep(0.1)
+    # Slight throttle to avoid overloading merriam-webster.com 
+    time.sleep(0.01)
     try:
-        word_dict[word] = merriam_webster_def(word)
-        with open('../logs/def_successes', 'a') as f:
-            f.write(f"Defined {word} successfully\n")
+        definition = merriam_webster_def(word)
+        words_dict[word] = definition
+        with open('../logs/defs', 'a') as f:
+            f.write(f"{word} !@#$%^& {definition}\n")
     except BaseException as e:
-        with open('../logs/def_failures', 'a') as f:
-            f.write(f"Didn't define {word}: {e}\n")
+        with open('../logs/failures', 'a') as f:
+            f.write(f"Couldn't define {word} due to: {e}\n")
 
-with open('dictionary.pickle', 'wb') as handle:
-    pickle.dump(word_dict, handle, protocol=pickle.HIGHEST_PROTOCOL)
+with open('dict.pickle', 'wb') as handle:
+    pickle.dump(words_dict, handle, protocol=pickle.HIGHEST_PROTOCOL)
+    
