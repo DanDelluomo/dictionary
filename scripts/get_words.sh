@@ -13,8 +13,3 @@ then
 else
     echo "/usr/share/dict/words not found"
 fi
-
-
-
-
-
