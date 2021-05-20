@@ -128,4 +128,9 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-words.txt
+
+# Visual Studio
+.vscode
+
+# App specific
+logs
