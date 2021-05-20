@@ -1,8 +1,9 @@
+#!/usr/bin/env python
 
-# from tensorflow.keras.preprocessing.text import Tokenizer
-# This doesn't line doesn't work on my computer: 
-#   from tensorflow.keras.preprocessing.text import Tokenizer
-# After repeated reinstalling of packages, I gave up and built my own tokenizer
+"""
+The statement: from tensorflow.keras.preprocessing.text import Tokenizer
+doesn't work on my laptop for some reason. After repeated attempts to fix this apparently environment-related error, I decided to simply build a tokenizer myself.
+"""
 
 def tokenizer(words_list: list) -> dict:
     """Tokenizes words in word_list"""
