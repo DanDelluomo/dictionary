@@ -32,6 +32,6 @@ for word in words_list:
         with open('../logs/failures', 'a') as f:
             f.write(f"Couldn't define {word} due to: {e}\n")
 
-with open('dict.pickle.02', 'wb') as handle:
+with open('dict.pickle', 'wb') as handle:
     pickle.dump(words_dict, handle, protocol=pickle.HIGHEST_PROTOCOL)
     
