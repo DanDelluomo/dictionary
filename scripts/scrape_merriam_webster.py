@@ -14,3 +14,4 @@ def merriam_webster_def(word: str) -> str:
     soup = bs(response.content, 'lxml')
     # print(soup.select_one('.mw_t_bc').next_sibling.strip())
     return soup.select_one('.mw_t_bc').next_sibling.strip()
+    print(1)
