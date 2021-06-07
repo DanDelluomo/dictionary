@@ -13,11 +13,15 @@ from scrape_merriam_webster import merriam_webster_def
 with open('../words.txt', 'r') as f:
    words_list = f.read().split()
 
-# Figure out overall progress 
-with open('logs/defs') as f:
-    number_defs = len(f.readlines())
+# Figure out last defined word  
+with open('../logs/defs') as f:
+    new_index = 0
+    if len(f.readlines()) > 2:
+        last_line = f.readlines()[-1]
+        last_word = last_line.split(' ')[0]
+        new_index = words_list.index(word) + 1
 
-words_list = words_list[number_defs:]
+words_list = words_list[new_index:]
 
 words_dict = {}
 for word in words_list:
