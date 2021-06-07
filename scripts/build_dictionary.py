@@ -31,7 +31,7 @@ for word in words_list:
         definition = merriam_webster_def(word)
         words_dict[word] = definition
         with open('../logs/defs', 'a') as f:
-            f.write(f"{word} !/!/! {definition}\n")
+            f.write(f"{word} {definition}\n")
     except BaseException as e:
         with open('../logs/failures', 'a') as f:
             f.write(f"Couldn't define {word} due to: {e}\n")
