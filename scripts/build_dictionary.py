@@ -16,10 +16,11 @@ with open('../words.txt', 'r') as f:
 # Figure out last defined word  
 with open('../logs/defs') as f:
     new_index = 0
-    if len(f.readlines()) > 2:
-        last_line = f.readlines()[-1]
+    whole_file = f.readlines()
+    if len(whole_file) > 2:
+        last_line = whole_file[-1]
         last_word = last_line.split(' ')[0]
-        new_index = words_list.index(word) + 1
+        new_index = words_list.index(last_word) + 1
 
 words_list = words_list[new_index:]
 
