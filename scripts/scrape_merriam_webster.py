@@ -2,6 +2,10 @@
 
 """Scrape the definition of a word from merriam-webster.com"""
 
+# Import Standard Libary Packages
+import pathlib
+
+# Import external packages
 import requests
 from bs4 import BeautifulSoup as bs
 
