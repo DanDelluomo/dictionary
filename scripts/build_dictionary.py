@@ -7,13 +7,13 @@ import pickle
 import time
 import pathlib
 
+# Import project modules
+from scrape_merriam_webster import merriam_webster_def
+
 parent_path = pathlib.Path(__file__).absolute().parents[1] 
 words_path = parent_path / "tools" / "words.txt"
 defs_path = parent_path / "defs_test"
 failures_path = parent_path / "logs" / "failures"
-
-# Import project modules
-from scrape_merriam_webster import merriam_webster_def
 
 # Retrieve massive Unix system word list
 with open(words_path, 'r') as f:
