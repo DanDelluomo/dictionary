@@ -14,9 +14,7 @@ base_url = "https://www.merriam-webster.com/dictionary/"
 def merriam_webster_def(word: str) -> str:
     """
     Scrape a word's definition on merriam-webster.com
-    
     Returns scraped definition.
-    
     """
     word_url = base_url + word
     response = requests.get(word_url)
