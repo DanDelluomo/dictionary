@@ -12,4 +12,7 @@ then
     fi
 else
     echo "/usr/share/dict/words not found"
+    exit 1
 fi
+
+exit 0
