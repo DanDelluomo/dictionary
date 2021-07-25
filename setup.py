@@ -10,8 +10,8 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name="english_dictionary",
-    version="1.0.0",
-    description="In-memory dictionary of one hundred thousand English words",
+    version="1.0.1",
+    description="In-memory dictionary of 100 thousand English words",
     long_description=README,
     long_description_content_type="text/markdown",
     url="https://github.com/DanDelluomo/dictionary",
@@ -23,5 +23,10 @@ setup(
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.7",
     ],
-
+    packages=["english_dictionary"],
+    include_package_data=True,
+    install_requires=[
+        "requests",
+        "bs4",
+    ],
 )
