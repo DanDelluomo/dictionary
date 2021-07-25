@@ -1,4 +1,3 @@
-include definitions 
-include dict_pkl
-include english_dictionary/scripts/dict_pkl
-include *
+recursive-include english_dictionary *.pkl
+include english_dictionary/scripts/dict.pkl
+recursive-include *.pkl

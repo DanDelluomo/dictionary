@@ -10,7 +10,7 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name="english_dictionary",
-    version="1.0.12",
+    version="1.0.21",
     description="In-memory dictionary of 100 thousand English words",
     long_description=README,
     long_description_content_type="text/markdown",
@@ -24,6 +24,8 @@ setup(
         "Programming Language :: Python :: 3.7",
     ],
     packages=["english_dictionary"],
+    package_dir={'english_dictionary': 'english_dictionary'},
+    package_data={'english_dictionary': ['scripts/*.pkl']},
     include_package_data=True,
     install_requires=[
         "requests",

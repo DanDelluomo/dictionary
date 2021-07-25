@@ -4,6 +4,8 @@
 import pathlib
 import pickle
 
+pickle_path = pathlib.Path(__file__).absolute().parents[1] / "data" / "dict_pkl"
+
 def get_dict() -> dict:
-    with open('dict_pkl', 'rb') as pickle_dict:
+    with open(pickle_path, 'rb') as pickle_dict:
         return pickle.load(pickle_dict)
