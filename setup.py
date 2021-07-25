@@ -10,7 +10,7 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name="english_dictionary",
-    version="1.0.1",
+    version="1.0.4",
     description="In-memory dictionary of 100 thousand English words",
     long_description=README,
     long_description_content_type="text/markdown",
@@ -29,4 +29,9 @@ setup(
         "requests",
         "bs4",
     ],
+    entry_points={
+        "console_scripts": [
+            "dictionary=english_dictionary.scripts.read_pickle:get_dict"
+        ]
+    },
 )

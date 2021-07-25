@@ -10,5 +10,8 @@ pip install english_dictionary
 ## Usage
 
 ```
-import english_dictionary
+from english_dictionary.scripts.read_pickle import get_dict
+english_dict = get_dict()
+
+english_dict["xylophone"]  # english_dict is a Python dictionary of English
 ```
