@@ -10,7 +10,7 @@ README = (HERE / "README.md").read_text()
 
 setup(
     name="english_dictionary",
-    version="1.0.4",
+    version="1.0.12",
     description="In-memory dictionary of 100 thousand English words",
     long_description=README,
     long_description_content_type="text/markdown",
