@@ -1,4 +1,4 @@
 include definitions 
-include dict.pkl
-global-include *.pkl
+include dict_pkl
+include english_dictionary/scripts/dict_pkl
 include *
