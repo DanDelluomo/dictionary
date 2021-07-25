@@ -16,7 +16,7 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/DanDelluomo/dictionary",
     author="Daniel E. Dell'uomo",
-    author_email="dandelluomo@gmail.com".
+    author_email="dandelluomo@gmail.com",
     license="MIT",
     classifiers=[
         "License :: OSI Approved :: MIT License",
