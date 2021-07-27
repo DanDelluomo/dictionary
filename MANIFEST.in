@@ -1,3 +1,5 @@
 recursive-include english_dictionary *.pkl
 include english_dictionary/scripts/dict.pkl
 recursive-include *.pkl
+recursive-include data *
+
